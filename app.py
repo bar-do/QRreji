@@ -6,6 +6,9 @@ import streamlit as st
 from camera_input_live import camera_input_live
 
 st.title("レジアプリ")
+
+pg = st.navigation([st.Page("QRmade.py")])
+pg.run()
 image = camera_input_live()
 
 if image is not None:
