@@ -17,7 +17,7 @@ if image is not None:
 
     detector = cv2.QRCodeDetector()
 
-    data = detector.detectAndDecode(cv2_img)
+    data, bbox, straight_qrcode = detector.detectAndDecode(cv2_img)
 
     if data:
         st.write("# Found QR code")
